@@ -115,7 +115,7 @@ function Contact() {
       label: "Email",
       value: "aldofrsyh21@gmail.com",
       href: "mailto:aldofrsyh21@gmail.com",
-      color: "from-yellow-300 to-orange-400",
+      color: "from-gold-400 to-gold-600",
       delay: 200,
       copyText: "aldofrsyh21@gmail.com",
     },
@@ -124,7 +124,7 @@ function Contact() {
       label: "Lokasi",
       value: "Kampus Universitas Pamulang",
       href: "https://maps.google.com/?q=Universitas+Pamulang",
-      color: "from-pink-400 to-rose-400",
+      color: "from-coral-400 to-coral-400",
       delay: 300,
       copyText: "Universitas Pamulang",
     },
@@ -133,7 +133,7 @@ function Contact() {
       label: "Telepon",
       value: "+62 858-9223-3052",
       href: "tel:+6285892233052",
-      color: "from-purple-400 to-indigo-400",
+      color: "from-teal-400 to-ink-400",
       delay: 400,
       copyText: "+62 858-9223-3052",
     },
@@ -145,16 +145,16 @@ function Contact() {
 
   // Floating shapes (nonaktif di mobile)
   const floatingShapes = !isMobile ? [
-    { size: 60, top: 10, left: 5, color: "bg-purple-500/10", duration: 15 },
-    { size: 80, top: 70, left: 80, color: "bg-pink-500/10", duration: 20 },
-    { size: 50, top: 40, left: 50, color: "bg-yellow-500/10", duration: 18 },
-    { size: 40, top: 85, left: 20, color: "bg-blue-500/10", duration: 12 },
+    { size: 60, top: 10, left: 5, color: "bg-teal-500/10", duration: 15 },
+    { size: 80, top: 70, left: 80, color: "bg-coral-500/10", duration: 20 },
+    { size: 50, top: 40, left: 50, color: "bg-gold-600/10", duration: 18 },
+    { size: 40, top: 85, left: 20, color: "bg-teal-500/10", duration: 12 },
   ] : [];
 
   return (
     <div
       ref={containerRef}
-      className="min-h-screen bg-gradient-to-br from-indigo-700 via-purple-700 to-blue-600 dark:from-gray-900 dark:via-gray-800 dark:to-black text-white p-4 md:p-10 overflow-hidden relative"
+      className="min-h-screen bg-gradient-to-br from-ink-700 via-teal-700 to-ink-500 dark:from-ink-900 dark:via-ink-800 dark:to-ink-950 text-paper-100 p-4 md:p-10 overflow-hidden relative"
     >
       {/* Background pattern grid */}
       <div className="fixed inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
@@ -191,11 +191,11 @@ function Contact() {
         {particles.map((p) => {
           let className = "absolute rounded-full ";
           if (p.type === "sparkle") {
-            className += "bg-yellow-300/40 animate-twinkle";
+            className += "bg-gold-400/40 animate-twinkle";
           } else if (p.type === "square") {
-            className += "bg-white/20 animate-float rounded-none rotate-45";
+            className += "bg-paper-100/20 animate-float rounded-none rotate-45";
           } else {
-            className += "bg-white/30 animate-float";
+            className += "bg-paper-100/30 animate-float";
           }
           return (
             <div
@@ -222,19 +222,19 @@ function Contact() {
       {!isMobile && (
         <>
           <div
-            className="fixed -top-40 -left-40 w-[700px] h-[700px] bg-purple-500/15 rounded-full blur-3xl pointer-events-none transition-transform duration-300 ease-out"
+            className="fixed -top-40 -left-40 w-[700px] h-[700px] bg-teal-500/15 rounded-full blur-3xl pointer-events-none transition-transform duration-300 ease-out"
             style={{
               transform: `translate(${mousePosition.x * -30}px, ${mousePosition.y * -30}px)`,
             }}
           />
           <div
-            className="fixed top-60 -right-40 w-[700px] h-[700px] bg-indigo-500/15 rounded-full blur-3xl pointer-events-none transition-transform duration-300 ease-out"
+            className="fixed top-60 -right-40 w-[700px] h-[700px] bg-ink-500/15 rounded-full blur-3xl pointer-events-none transition-transform duration-300 ease-out"
             style={{
               transform: `translate(${mousePosition.x * 30}px, ${mousePosition.y * -30}px)`,
             }}
           />
           <div
-            className="fixed bottom-20 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-yellow-300/10 rounded-full blur-3xl pointer-events-none transition-transform duration-300 ease-out"
+            className="fixed bottom-20 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-gold-400/10 rounded-full blur-3xl pointer-events-none transition-transform duration-300 ease-out"
             style={{
               transform: `translate(${mousePosition.x * -40}px, ${mousePosition.y * 40}px)`,
             }}
@@ -246,7 +246,7 @@ function Contact() {
         {/* Back Button */}
         <Link
           to="/"
-          className="group inline-flex items-center gap-2 px-4 md:px-6 py-2 md:py-2.5 bg-white/20 backdrop-blur-xl rounded-xl hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-lg border border-white/10 mb-8 md:mb-12 text-sm md:text-base"
+          className="group inline-flex items-center gap-2 px-4 md:px-6 py-2 md:py-2.5 bg-paper-100/20 backdrop-blur-xl rounded-xl hover:bg-paper-100/30 transition-all duration-300 hover:scale-105 shadow-lg border border-paper-100/10 mb-8 md:mb-12 text-sm md:text-base"
         >
           <ArrowLeft size={16} className="md:w-[18px] md:h-[18px] group-hover:-translate-x-1 transition-transform" />
           <span>Kembali</span>
@@ -258,13 +258,13 @@ function Contact() {
             <span className="absolute -top-8 -right-8 text-4xl md:text-6xl opacity-20 animate-pulse">✦</span>
             <span className="absolute -bottom-8 -left-8 text-4xl md:text-6xl opacity-20 animate-pulse delay-1000">✦</span>
             <span className="absolute top-1/2 -left-8 md:-left-12 text-3xl md:text-4xl opacity-10 animate-pulse delay-500">✦</span>
-            <h1 className="text-3xl md:text-6xl font-extrabold bg-gradient-to-r from-yellow-300 via-orange-400 to-pink-400 bg-[length:200%_auto] animate-gradient-x bg-clip-text text-transparent drop-shadow-[0_4px_40px_rgba(251,191,36,0.3)]">
+            <h1 className="font-display text-3xl md:text-6xl font-semibold bg-gradient-to-r from-gold-400 via-gold-600 to-coral-400 bg-[length:200%_auto] animate-gradient-x bg-clip-text text-transparent drop-shadow-[0_4px_40px_rgba(251,191,36,0.3)]">
               {isMobile ? "Hubungi Kami" : "Hubungi Kami"}
             </h1>
-            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1/3 md:w-1/2 h-1 bg-gradient-to-r from-yellow-300 to-orange-400 rounded-full"></div>
+            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1/3 md:w-1/2 h-1 bg-gradient-to-r from-gold-400 to-gold-600 rounded-full"></div>
           </div>
-          <p className="text-white/50 mt-4 md:mt-6 max-w-xl mx-auto text-xs md:text-sm flex items-center justify-center gap-2">
-            <Sparkles size={14} className="md:w-[16px] md:h-[16px] text-yellow-400/60 animate-pulse" />
+          <p className="text-paper-100/50 mt-4 md:mt-6 max-w-xl mx-auto text-xs md:text-sm flex items-center justify-center gap-2">
+            <Sparkles size={14} className="md:w-[16px] md:h-[16px] text-gold-500/60 animate-pulse" />
             Ada pertanyaan atau ingin berkolaborasi? Hubungi kami!
           </p>
         </div>
@@ -279,27 +279,27 @@ function Contact() {
               return (
                 <div
                   key={index}
-                  className={`group relative bg-white/10 backdrop-blur-xl p-5 md:p-6 rounded-2xl md:rounded-3xl border border-white/10 hover:border-yellow-300/30 transition-all duration-500 hover:-translate-y-1 md:hover:-translate-y-2 hover:shadow-2xl hover:shadow-yellow-500/10 animate-fadeUp`}
+                  className={`group relative bg-paper-100/10 backdrop-blur-xl p-5 md:p-6 rounded-2xl md:rounded-3xl border border-paper-100/10 hover:border-gold-400/30 transition-all duration-500 hover:-translate-y-1 md:hover:-translate-y-2 hover:shadow-2xl hover:shadow-gold-600/10 animate-fadeUp`}
                   style={{ animationDelay: `${item.delay}ms` }}
                 >
                   <div className="flex items-center gap-3 md:gap-4">
                     <div className={`p-2 md:p-3 rounded-full bg-gradient-to-br ${item.color} bg-opacity-20 group-hover:scale-110 transition-transform duration-300`}>
-                      <Icon size={isMobile ? 16 : 20} className="text-white/80" />
+                      <Icon size={isMobile ? 16 : 20} className="text-paper-100/80" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-white/40 text-[10px] md:text-xs font-medium uppercase tracking-wider">{item.label}</p>
-                      <p className="text-white/80 group-hover:text-white transition-colors text-xs md:text-sm font-medium flex items-center gap-1 md:gap-2 flex-wrap">
+                      <p className="text-paper-100/40 text-[10px] md:text-xs font-medium uppercase tracking-wider">{item.label}</p>
+                      <p className="text-paper-100/80 group-hover:text-paper-100 transition-colors text-xs md:text-sm font-medium flex items-center gap-1 md:gap-2 flex-wrap">
                         <span className="truncate">{item.value}</span>
                         {item.copyText && (
                           <button
                             onClick={() => copyToClipboard(item.copyText, item.label)}
-                            className="p-0.5 md:p-1 rounded-full hover:bg-white/10 transition-all duration-200 hover:scale-110 flex-shrink-0"
+                            className="p-0.5 md:p-1 rounded-full hover:bg-paper-100/10 transition-all duration-200 hover:scale-110 flex-shrink-0"
                             aria-label="Copy"
                           >
                             {isCopied ? (
                               <Check size={isMobile ? 10 : 14} className="text-green-400 animate-fadeUp" />
                             ) : (
-                              <Copy size={isMobile ? 10 : 14} className="text-white/40 hover:text-white" />
+                              <Copy size={isMobile ? 10 : 14} className="text-paper-100/40 hover:text-paper-100" />
                             )}
                           </button>
                         )}
@@ -312,9 +312,9 @@ function Contact() {
             })}
 
             {/* Social Media */}
-            <div className="bg-white/10 backdrop-blur-xl p-5 md:p-6 rounded-2xl md:rounded-3xl border border-white/10 hover:border-yellow-300/20 transition-all duration-500 animate-fadeUp delay-500 hover:shadow-2xl hover:shadow-yellow-500/10">
-              <h3 className="text-xs md:text-sm font-semibold text-white/60 mb-3 md:mb-4 flex items-center gap-2">
-                <Sparkles size={isMobile ? 12 : 16} className="text-yellow-400/60" />
+            <div className="bg-paper-100/10 backdrop-blur-xl p-5 md:p-6 rounded-2xl md:rounded-3xl border border-paper-100/10 hover:border-gold-400/20 transition-all duration-500 animate-fadeUp delay-500 hover:shadow-2xl hover:shadow-gold-600/10">
+              <h3 className="text-xs md:text-sm font-semibold text-paper-100/60 mb-3 md:mb-4 flex items-center gap-2">
+                <Sparkles size={isMobile ? 12 : 16} className="text-gold-500/60" />
                 Ikuti Kami
               </h3>
               <div className="flex gap-2 md:gap-3">
@@ -326,11 +326,11 @@ function Contact() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group relative p-2 md:p-2.5 rounded-full bg-white/10 hover:bg-yellow-300 hover:text-black transition-all duration-300 hover:scale-110 hover:-translate-y-1 shadow-md hover:shadow-yellow-500/20"
+                      className="group relative p-2 md:p-2.5 rounded-full bg-paper-100/10 hover:bg-gold-400 hover:text-black transition-all duration-300 hover:scale-110 hover:-translate-y-1 shadow-md hover:shadow-gold-600/20"
                       aria-label={social.label}
                     >
-                      <Icon size={isMobile ? 14 : 18} className="text-white/60 group-hover:text-black transition-colors" />
-                      <span className="absolute -top-7 md:-top-8 left-1/2 -translate-x-1/2 bg-black/80 text-white text-[8px] md:text-[10px] px-1.5 md:px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                      <Icon size={isMobile ? 14 : 18} className="text-paper-100/60 group-hover:text-black transition-colors" />
+                      <span className="absolute -top-7 md:-top-8 left-1/2 -translate-x-1/2 bg-ink-950/80 text-paper-100 text-[8px] md:text-[10px] px-1.5 md:px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
                         {social.label}
                       </span>
                     </a>
@@ -343,22 +343,22 @@ function Contact() {
 
           {/* Contact Form */}
           <div className="md:col-span-3 order-1 md:order-2">
-            <div className="bg-white/10 backdrop-blur-xl p-5 md:p-10 rounded-2xl md:rounded-3xl border border-white/10 shadow-2xl hover:border-yellow-300/20 transition-all duration-500 animate-fadeUp delay-200 relative overflow-hidden">
+            <div className="bg-paper-100/10 backdrop-blur-xl p-5 md:p-10 rounded-2xl md:rounded-3xl border border-paper-100/10 shadow-2xl hover:border-gold-400/20 transition-all duration-500 animate-fadeUp delay-200 relative overflow-hidden">
               {/* Background gradient animasi — lebih kecil di mobile */}
-              <div className="absolute -top-20 -right-20 w-40 md:w-60 h-40 md:h-60 bg-yellow-300/10 rounded-full blur-2xl animate-pulse-slow"></div>
-              <div className="absolute -bottom-20 -left-20 w-40 md:w-60 h-40 md:h-60 bg-pink-400/10 rounded-full blur-2xl animate-pulse-slow delay-1000"></div>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 md:w-80 h-60 md:h-80 bg-purple-400/5 rounded-full blur-3xl animate-pulse-slow delay-500"></div>
+              <div className="absolute -top-20 -right-20 w-40 md:w-60 h-40 md:h-60 bg-gold-400/10 rounded-full blur-2xl animate-pulse-slow"></div>
+              <div className="absolute -bottom-20 -left-20 w-40 md:w-60 h-40 md:h-60 bg-coral-400/10 rounded-full blur-2xl animate-pulse-slow delay-1000"></div>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 md:w-80 h-60 md:h-80 bg-teal-400/5 rounded-full blur-3xl animate-pulse-slow delay-500"></div>
 
               <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-6 relative z-10">
-                <div className="p-1.5 md:p-2 rounded-full bg-yellow-400/20 group-hover:scale-110 transition-transform duration-300">
-                  <Send size={isMobile ? 18 : 22} className="text-yellow-400/70" />
+                <div className="p-1.5 md:p-2 rounded-full bg-gold-500/20 group-hover:scale-110 transition-transform duration-300">
+                  <Send size={isMobile ? 18 : 22} className="text-gold-500/70" />
                 </div>
                 <h2 className="text-lg md:text-2xl font-bold">Kirim Pesan</h2>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5 relative z-10">
                 <div className="relative group">
-                  <label className="text-white/60 text-xs md:text-sm block mb-1 font-medium">Nama Lengkap</label>
+                  <label className="text-paper-100/60 text-xs md:text-sm block mb-1 font-medium">Nama Lengkap</label>
                   <div className="relative">
                     <input
                       type="text"
@@ -366,7 +366,7 @@ function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-3 md:px-4 py-2.5 md:py-3.5 text-sm md:text-base rounded-xl bg-white/5 border border-white/10 focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none transition-all placeholder-white/50 group-hover:border-white/20"
+                      className="w-full px-3 md:px-4 py-2.5 md:py-3.5 text-sm md:text-base rounded-xl bg-paper-100/5 border border-paper-100/10 focus:ring-2 focus:ring-gold-500 focus:border-transparent outline-none transition-all placeholder-white/50 group-hover:border-paper-100/20"
                       placeholder="Nama Anda"
                     />
                     {formData.name && (
@@ -376,7 +376,7 @@ function Contact() {
                 </div>
 
                 <div className="relative group">
-                  <label className="text-white/60 text-xs md:text-sm block mb-1 font-medium">Email</label>
+                  <label className="text-paper-100/60 text-xs md:text-sm block mb-1 font-medium">Email</label>
                   <div className="relative">
                     <input
                       type="email"
@@ -384,7 +384,7 @@ function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                     className="w-full px-3 md:px-4 py-2.5 md:py-3.5 text-sm md:text-base rounded-xl bg-white/5 border border-white/10 focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none transition-all placeholder-white/50 group-hover:border-white/20"
+                     className="w-full px-3 md:px-4 py-2.5 md:py-3.5 text-sm md:text-base rounded-xl bg-paper-100/5 border border-paper-100/10 focus:ring-2 focus:ring-gold-500 focus:border-transparent outline-none transition-all placeholder-white/50 group-hover:border-paper-100/20"
                       placeholder="email@example.com"
                     />
                     {formData.email && formData.email.includes("@") && (
@@ -394,7 +394,7 @@ function Contact() {
                 </div>
 
                 <div className="relative group">
-                  <label className="text-white/60 text-xs md:text-sm block mb-1 font-medium">Pesan</label>
+                  <label className="text-paper-100/60 text-xs md:text-sm block mb-1 font-medium">Pesan</label>
                   <div className="relative">
                     <textarea
                       name="message"
@@ -403,27 +403,27 @@ function Contact() {
                       required
                       maxLength={maxChars}
                       rows={isMobile ? 4 : 5}
-                      className="w-full px-3 md:px-4 py-2.5 md:py-3.5 text-sm md:text-base rounded-xl bg-white/5 border border-white/10 focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none transition-all placeholder-white/30 group-hover:border-white/20 resize-none"
+                      className="w-full px-3 md:px-4 py-2.5 md:py-3.5 text-sm md:text-base rounded-xl bg-paper-100/5 border border-paper-100/10 focus:ring-2 focus:ring-gold-500 focus:border-transparent outline-none transition-all placeholder-white/30 group-hover:border-paper-100/20 resize-none"
                       placeholder="Tulis pesan Anda..."
                     />
-                    <div className="absolute bottom-2 md:bottom-3 right-2 md:right-3 text-white/30 text-[8px] md:text-[10px] font-mono">
+                    <div className="absolute bottom-2 md:bottom-3 right-2 md:right-3 text-paper-100/30 text-[8px] md:text-[10px] font-mono">
                       {characterCount}/{maxChars}
                     </div>
                   </div>
                   {characterCount > 0 && (
-                    <div className="mt-1.5 md:mt-2 w-full h-1 md:h-1.5 bg-white/10 rounded-full overflow-hidden">
+                    <div className="mt-1.5 md:mt-2 w-full h-1 md:h-1.5 bg-paper-100/10 rounded-full overflow-hidden">
                       <div
                         className={`h-full transition-all duration-500 rounded-full ${
                           characterCount > maxChars * 0.8
-                            ? "bg-gradient-to-r from-yellow-400 to-orange-400 animate-pulse"
-                            : "bg-gradient-to-r from-yellow-300 to-orange-400"
+                            ? "bg-gradient-to-r from-gold-500 to-gold-600 animate-pulse"
+                            : "bg-gradient-to-r from-gold-400 to-gold-600"
                         }`}
                         style={{ width: `${(characterCount / maxChars) * 100}%` }}
                       />
                     </div>
                   )}
                   {characterCount > maxChars - 50 && (
-                    <div className="flex items-center gap-1 mt-1 text-yellow-400/60 text-[8px] md:text-[10px] animate-pulse">
+                    <div className="flex items-center gap-1 mt-1 text-gold-500/60 text-[8px] md:text-[10px] animate-pulse">
                       <AlertCircle size={isMobile ? 10 : 12} />
                       <span>Pesan mendekati batas maksimal</span>
                     </div>
@@ -433,12 +433,12 @@ function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="relative w-full py-2.5 md:py-3.5 bg-gradient-to-r from-yellow-300 to-orange-400 text-black font-bold rounded-xl hover:scale-[1.02] transition-all duration-300 shadow-lg shadow-yellow-500/20 hover:shadow-yellow-400/40 flex items-center justify-center gap-2 overflow-hidden group text-sm md:text-base"
+                  className="relative w-full py-2.5 md:py-3.5 bg-gradient-to-r from-gold-400 to-gold-600 text-black font-bold rounded-xl hover:scale-[1.02] transition-all duration-300 shadow-lg shadow-gold-600/20 hover:shadow-gold-500/40 flex items-center justify-center gap-2 overflow-hidden group text-sm md:text-base"
                 >
                   <span className="relative z-10 flex items-center gap-2">
                     {isSubmitting ? (
                       <>
-                        <span className="w-4 md:w-5 h-4 md:h-5 border-2 border-black/30 border-t-black rounded-full animate-spin"></span>
+                        <span className="w-4 md:w-5 h-4 md:h-5 border-2 border-ink-950/30 border-t-ink-950 rounded-full animate-spin"></span>
                         <span className="text-sm md:text-base">Mengirim...</span>
                       </>
                     ) : (
@@ -448,8 +448,8 @@ function Contact() {
                       </>
                     )}
                   </span>
-                  <span className="absolute inset-0 bg-gradient-to-r from-yellow-200 to-orange-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                  <span className="absolute inset-0 bg-white/20 scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full blur-xl"></span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-gold-200 to-gold-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  <span className="absolute inset-0 bg-paper-100/20 scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full blur-xl"></span>
                 </button>
 
                 {submitted && (
@@ -464,17 +464,17 @@ function Contact() {
         </div>
 
         {/* Footer */}
-        <div className="mt-12 md:mt-16 text-center text-white/20 text-[10px] md:text-xs font-mono flex flex-col items-center gap-1.5 md:gap-2">
-          <p className="text-xs md:text-sm text-white/30 font-semibold tracking-wider">SISVOR 009</p>
+        <div className="mt-12 md:mt-16 text-center text-paper-100/20 text-[10px] md:text-xs font-mono flex flex-col items-center gap-1.5 md:gap-2">
+          <p className="text-xs md:text-sm text-paper-100/30 font-semibold tracking-wider">SISVOR 009</p>
           <p className="text-[8px] md:text-[10px]">SISVOR 009 © {new Date().getFullYear()} — Built with ❤️</p>
-          <div className="flex items-center gap-3 md:gap-4 text-[8px] md:text-[10px] text-white/10">
-            <span className="hover:text-white/30 transition-colors">React</span>
-            <span className="w-px h-2 bg-white/10"></span>
-            <span className="hover:text-white/30 transition-colors">Node.js</span>
-            <span className="w-px h-2 bg-white/10"></span>
-            <span className="hover:text-white/30 transition-colors">MongoDB</span>
-            <span className="w-px h-2 bg-white/10"></span>
-            <span className="hover:text-white/30 transition-colors">Tailwind</span>
+          <div className="flex items-center gap-3 md:gap-4 text-[8px] md:text-[10px] text-paper-100/10">
+            <span className="hover:text-paper-100/30 transition-colors">React</span>
+            <span className="w-px h-2 bg-paper-100/10"></span>
+            <span className="hover:text-paper-100/30 transition-colors">Node.js</span>
+            <span className="w-px h-2 bg-paper-100/10"></span>
+            <span className="hover:text-paper-100/30 transition-colors">MongoDB</span>
+            <span className="w-px h-2 bg-paper-100/10"></span>
+            <span className="hover:text-paper-100/30 transition-colors">Tailwind</span>
           </div>
         </div>
       </div>
@@ -482,7 +482,7 @@ function Contact() {
       {/* Scroll to Top Button — lebih kecil di mobile */}
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-4 md:bottom-6 right-4 md:right-6 z-50 p-2.5 md:p-3 rounded-full bg-gradient-to-r from-yellow-300 to-orange-400 text-black shadow-lg shadow-yellow-500/20 hover:scale-110 transition-all duration-300 ${
+        className={`fixed bottom-4 md:bottom-6 right-4 md:right-6 z-50 p-2.5 md:p-3 rounded-full bg-gradient-to-r from-gold-400 to-gold-600 text-black shadow-lg shadow-gold-600/20 hover:scale-110 transition-all duration-300 ${
           showScrollTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
         }`}
         aria-label="Scroll to top"

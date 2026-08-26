@@ -13,10 +13,10 @@ const Gallery = lazy(() => import("./pages/Gallery"));
 
 // Komponen loading fallback
 const PageLoader = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-700 via-purple-700 to-blue-600 dark:from-gray-900 dark:via-gray-800 dark:to-black">
+  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-ink-700 via-teal-700 to-ink-500 dark:from-ink-900 dark:via-ink-800 dark:to-ink-950">
     <div className="flex flex-col items-center gap-4">
-      <div className="w-16 h-16 border-4 border-yellow-400 border-t-transparent rounded-full animate-spin"></div>
-      <p className="text-white/80 text-lg animate-pulse">Loading...</p>
+      <div className="w-16 h-16 border-4 border-gold-500 border-t-transparent rounded-full animate-spin"></div>
+      <p className="text-paper-100/80 text-lg animate-pulse">Loading...</p>
     </div>
   </div>
 );
@@ -51,7 +51,7 @@ function App() {
   }, [darkMode]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 dark:from-black dark:via-gray-900 dark:to-gray-950 transition-colors duration-500">
+    <div className="min-h-screen bg-gradient-to-br from-ink-600 via-teal-600 to-ink-500 dark:from-ink-950 dark:via-ink-900 dark:to-ink-950 transition-colors duration-500">
       <Suspense fallback={<PageLoader />}>
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>

@@ -32,7 +32,7 @@ function DarkModeToggle({ onChange, defaultDark }) {
     return (
         <button
             onClick={toggleDark}
-            className="relative w-16 h-8 flex items-center bg-gray-300 dark:bg-gray-700 rounded-full p-1 transition duration-300"
+            className="relative w-16 h-8 flex items-center bg-ink-200 dark:bg-ink-700 rounded-full p-1 transition duration-300"
         >
             <span
                 className={`absolute text-xs left-2 transition ${
@@ -49,7 +49,7 @@ function DarkModeToggle({ onChange, defaultDark }) {
                 🌙
             </span>
             <div
-                className={`w-6 h-6 bg-white rounded-full shadow-md transform transition duration-300
+                className={`w-6 h-6 bg-paper-100 rounded-full shadow-md transform transition duration-300
                 ${dark ? "translate-x-8" : "translate-x-0"}`}
             ></div>
         </button>

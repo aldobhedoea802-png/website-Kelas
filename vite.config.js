@@ -3,8 +3,22 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/website-Kelas/', // ← ini penting agar path asset benar di GitHub Pages
+  base: '/website-Kelas/',
   build: {
-    outDir: 'dist', // default Vite, biarkan
+    outDir: 'dist',
   },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+        secure: false,
+      },
+      '/uploads': {
+        target: 'http://localhost:5000', // arahkan ke backend yang sama
+        changeOrigin: true,
+        secure: false,
+      }
+    }
+  }
 });

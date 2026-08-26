@@ -149,7 +149,7 @@ function About() {
     delay: Math.random() * 10,
     opacity: Math.random() * 0.4 + 0.05,
     type: Math.random() > 0.6 ? "sparkle" : "dot",
-    color: ["yellow-300", "pink-400", "purple-400", "blue-400", "white", "teal-400"][
+    color: ["gold-400", "coral-400", "teal-400", "teal-300", "white", "teal-400"][
       Math.floor(Math.random() * 6)
     ],
   }));
@@ -160,7 +160,7 @@ function About() {
       name: "Muhammad Saipul Ikhrom",
       role: "UI/UX · DevOps · Design Lead",
       avatar: "🎨",
-      color: "from-yellow-400 to-orange-400",
+      color: "from-gold-500 to-gold-600",
       bio: "UI/UX Designer, DevOps Engineer, Design Lead",
       skills: ["Figma", "CI/CD", "Design System"],
     },
@@ -168,7 +168,7 @@ function About() {
       name: "Aldo Feriansyah",
       role: "Frontend · Backend · Fullstack",
       avatar: "👨‍💻",
-      color: "from-blue-400 to-cyan-400",
+      color: "from-teal-300 to-teal-300",
       bio: "Frontend, Backend, Fullstack Developer",
       skills: ["React", "Node.js", "MongoDB"],
     },
@@ -178,19 +178,19 @@ function About() {
   const blurDecorations = !isMobile ? (
     <>
       <div
-        className="fixed -top-40 -left-40 w-[700px] h-[700px] bg-purple-500/15 rounded-full blur-3xl pointer-events-none transition-transform duration-300 ease-out"
+        className="fixed -top-40 -left-40 w-[700px] h-[700px] bg-teal-500/15 rounded-full blur-3xl pointer-events-none transition-transform duration-300 ease-out"
         style={{
           transform: `translate(${mousePosition.x * -35}px, ${mousePosition.y * -35}px)`,
         }}
       />
       <div
-        className="fixed top-60 -right-40 w-[700px] h-[700px] bg-indigo-500/15 rounded-full blur-3xl pointer-events-none transition-transform duration-300 ease-out"
+        className="fixed top-60 -right-40 w-[700px] h-[700px] bg-ink-500/15 rounded-full blur-3xl pointer-events-none transition-transform duration-300 ease-out"
         style={{
           transform: `translate(${mousePosition.x * 35}px, ${mousePosition.y * -35}px)`,
         }}
       />
       <div
-        className="fixed bottom-20 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-yellow-300/10 rounded-full blur-3xl pointer-events-none transition-transform duration-300 ease-out"
+        className="fixed bottom-20 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-gold-400/10 rounded-full blur-3xl pointer-events-none transition-transform duration-300 ease-out"
         style={{
           transform: `translate(${mousePosition.x * -45}px, ${mousePosition.y * 45}px)`,
         }}
@@ -212,7 +212,7 @@ function About() {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen bg-gradient-to-br from-indigo-700 via-purple-700 to-blue-600 dark:from-gray-900 dark:via-gray-800 dark:to-black text-white p-3 sm:p-4 md:p-10 overflow-hidden relative"
+      className="min-h-screen bg-gradient-to-br from-ink-700 via-teal-700 to-ink-500 dark:from-ink-900 dark:via-ink-800 dark:to-ink-950 text-paper-100 p-3 sm:p-4 md:p-10 overflow-hidden relative"
     >
       {/* Background pattern grid */}
       <div className="fixed inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
@@ -221,7 +221,7 @@ function About() {
       {mouseGlow}
 
       {/* Background animasi gradien */}
-      <div className="fixed inset-0 bg-[length:400%_400%] animate-gradient-slow bg-gradient-to-br from-indigo-700/20 via-purple-700/20 to-blue-600/20 dark:from-gray-900/20 dark:via-gray-800/20 dark:to-black/20 pointer-events-none"></div>
+      <div className="fixed inset-0 bg-[length:400%_400%] animate-gradient-slow bg-gradient-to-br from-ink-700/20 via-teal-700/20 to-ink-500/20 dark:from-ink-900/20 dark:via-ink-800/20 dark:to-ink-950/20 pointer-events-none"></div>
 
       {/* Partikel */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -231,7 +231,7 @@ function About() {
             className={`absolute rounded-full ${
               p.type === "sparkle"
                 ? `bg-${p.color}/40 animate-twinkle`
-                : `bg-white/20 animate-float`
+                : `bg-paper-100/20 animate-float`
             }`}
             style={{
               width: p.size,
@@ -256,7 +256,7 @@ function About() {
         {/* Back Button */}
         <Link
           to="/"
-          className="group inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-2.5 bg-white/20 backdrop-blur-xl rounded-xl hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-lg border border-white/10 mb-4 sm:mb-6 md:mb-12 text-xs sm:text-sm md:text-base"
+          className="group inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-2.5 bg-paper-100/20 backdrop-blur-xl rounded-xl hover:bg-paper-100/30 transition-all duration-300 hover:scale-105 shadow-lg border border-paper-100/10 mb-4 sm:mb-6 md:mb-12 text-xs sm:text-sm md:text-base"
         >
           <ArrowLeft size={14} className="sm:w-[16px] sm:h-[16px] md:w-[18px] md:h-[18px] group-hover:-translate-x-1 transition-transform" />
           <span>Kembali</span>
@@ -267,13 +267,13 @@ function About() {
           <div className="inline-block relative">
             <span className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 md:-top-10 md:-right-10 text-3xl sm:text-4xl md:text-6xl opacity-20 animate-pulse">✦</span>
             <span className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 md:-bottom-10 md:-left-10 text-3xl sm:text-4xl md:text-6xl opacity-20 animate-pulse delay-1000">✦</span>
-            <h1 className="text-xl sm:text-2xl md:text-7xl font-extrabold bg-gradient-to-r from-yellow-300 via-orange-400 to-pink-400 bg-[length:200%_auto] animate-gradient-x bg-clip-text text-transparent drop-shadow-[0_4px_40px_rgba(251,191,36,0.3)]">
+            <h1 className="text-xl sm:text-2xl md:text-7xl font-extrabold bg-gradient-to-r from-gold-400 via-gold-600 to-coral-400 bg-[length:200%_auto] animate-gradient-x bg-clip-text text-transparent drop-shadow-[0_4px_40px_rgba(251,191,36,0.3)]">
               Tentang SISVOR 009
             </h1>
-            <div className="absolute -bottom-1.5 sm:-bottom-2 left-1/2 -translate-x-1/2 w-1/4 sm:w-1/3 md:w-1/2 h-0.5 sm:h-0.5 md:h-1 bg-gradient-to-r from-yellow-300 to-orange-400 rounded-full"></div>
+            <div className="absolute -bottom-1.5 sm:-bottom-2 left-1/2 -translate-x-1/2 w-1/4 sm:w-1/3 md:w-1/2 h-0.5 sm:h-0.5 md:h-1 bg-gradient-to-r from-gold-400 to-gold-600 rounded-full"></div>
           </div>
-          <p className="text-white/50 mt-2 sm:mt-3 md:mt-6 max-w-xl mx-auto text-[10px] sm:text-xs md:text-sm flex items-center justify-center gap-1.5 sm:gap-2">
-            <Sparkles size={10} className="sm:w-[12px] sm:h-[12px] md:w-[16px] md:h-[16px] text-yellow-400/60 animate-pulse" />
+          <p className="text-paper-100/50 mt-2 sm:mt-3 md:mt-6 max-w-xl mx-auto text-[10px] sm:text-xs md:text-sm flex items-center justify-center gap-1.5 sm:gap-2">
+            <Sparkles size={10} className="sm:w-[12px] sm:h-[12px] md:w-[16px] md:h-[16px] text-gold-500/60 animate-pulse" />
             Mengenal lebih dekat komunitas SISVOR 009
           </p>
         </div>
@@ -282,14 +282,14 @@ function About() {
         <div className="space-y-6 sm:space-y-8 md:space-y-14">
           {/* Deskripsi */}
           <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-yellow-300 via-pink-400 to-purple-400 rounded-2xl sm:rounded-3xl blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
-            <div className="relative bg-white/10 backdrop-blur-xl p-4 sm:p-5 md:p-12 rounded-2xl sm:rounded-3xl border border-white/10 shadow-2xl hover:border-yellow-300/20 transition-all duration-500 hover:scale-[1.01] animate-fadeUp delay-200">
+            <div className="absolute -inset-1 bg-gradient-to-r from-gold-400 via-coral-400 to-teal-400 rounded-2xl sm:rounded-3xl blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
+            <div className="relative bg-paper-100/10 backdrop-blur-xl p-4 sm:p-5 md:p-12 rounded-2xl sm:rounded-3xl border border-paper-100/10 shadow-2xl hover:border-gold-400/20 transition-all duration-500 hover:scale-[1.01] animate-fadeUp delay-200">
               <h2 className="text-sm sm:text-base md:text-2xl font-bold mb-2 sm:mb-3 md:mb-4 flex items-center gap-1.5 sm:gap-2">
-                <Sparkles size={16} className="sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] text-yellow-400/70" />
+                <Sparkles size={16} className="sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] text-gold-500/70" />
                 Tentang Kami
               </h2>
-              <p className="text-white/70 leading-relaxed text-xs sm:text-sm md:text-base">
-                <span className="font-semibold text-yellow-300">SISVOR 009</span> "Kelas yang tak hanya mengajarkan arti kebersamaan, tetapi juga mengajarkan bahwa waktu bisa mengambil siapa saja tanpa sempat memberi kita kesempatan untuk benar-benar siap."
+              <p className="text-paper-100/70 leading-relaxed text-xs sm:text-sm md:text-base">
+                <span className="font-semibold text-gold-400">SISVOR 009</span> "Kelas yang tak hanya mengajarkan arti kebersamaan, tetapi juga mengajarkan bahwa waktu bisa mengambil siapa saja tanpa sempat memberi kita kesempatan untuk benar-benar siap."
               </p>
             </div>
           </div>
@@ -297,25 +297,25 @@ function About() {
           {/* Visi & Misi */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
             <div className="group relative animate-fadeUp delay-300">
-              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-300/30 to-orange-400/30 rounded-2xl sm:rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative bg-white/10 backdrop-blur-xl p-4 sm:p-5 md:p-8 rounded-2xl sm:rounded-3xl border border-white/10 hover:border-yellow-300/30 transition-all duration-500 hover:-translate-y-1 sm:hover:-translate-y-2 hover:shadow-2xl hover:shadow-yellow-500/10">
+              <div className="absolute -inset-1 bg-gradient-to-r from-gold-400/30 to-gold-600/30 rounded-2xl sm:rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative bg-paper-100/10 backdrop-blur-xl p-4 sm:p-5 md:p-8 rounded-2xl sm:rounded-3xl border border-paper-100/10 hover:border-gold-400/30 transition-all duration-500 hover:-translate-y-1 sm:hover:-translate-y-2 hover:shadow-2xl hover:shadow-gold-600/10">
                 <div className="text-3xl sm:text-4xl md:text-5xl mb-1.5 sm:mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">🚀</div>
-                <h3 className="text-sm sm:text-base md:text-xl font-bold mb-1.5 sm:mb-2 md:mb-3 text-yellow-300">Visi</h3>
-                <p className="text-white/60 text-[10px] sm:text-xs md:text-sm leading-relaxed">
+                <h3 className="text-sm sm:text-base md:text-xl font-bold mb-1.5 sm:mb-2 md:mb-3 text-gold-400">Visi</h3>
+                <p className="text-paper-100/60 text-[10px] sm:text-xs md:text-sm leading-relaxed">
                   "menjadikan bangku kuliah sebagai tempat bertumbuh, bukan sekedar tempat singgah menuju gelar."
                 </p>
-                <div className="mt-2 sm:mt-3 md:mt-4 flex items-center gap-1.5 sm:gap-2 text-yellow-400/30">
+                <div className="mt-2 sm:mt-3 md:mt-4 flex items-center gap-1.5 sm:gap-2 text-gold-500/30">
                   <Target size={10} className="sm:w-[12px] sm:h-[12px] md:w-[14px] md:h-[14px]" />
                   <span className="text-[7px] sm:text-[8px] md:text-[10px]">Target 2025</span>
                 </div>
               </div>
             </div>
             <div className="group relative animate-fadeUp delay-400">
-              <div className="absolute -inset-1 bg-gradient-to-r from-pink-400/30 to-purple-400/30 rounded-2xl sm:rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative bg-white/10 backdrop-blur-xl p-4 sm:p-5 md:p-8 rounded-2xl sm:rounded-3xl border border-white/10 hover:border-pink-300/30 transition-all duration-500 hover:-translate-y-1 sm:hover:-translate-y-2 hover:shadow-2xl hover:shadow-pink-500/10">
+              <div className="absolute -inset-1 bg-gradient-to-r from-coral-400/30 to-teal-400/30 rounded-2xl sm:rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative bg-paper-100/10 backdrop-blur-xl p-4 sm:p-5 md:p-8 rounded-2xl sm:rounded-3xl border border-paper-100/10 hover:border-coral-300/30 transition-all duration-500 hover:-translate-y-1 sm:hover:-translate-y-2 hover:shadow-2xl hover:shadow-coral-500/10">
                 <div className="text-3xl sm:text-4xl md:text-5xl mb-1.5 sm:mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">🎯</div>
-                <h3 className="text-sm sm:text-base md:text-xl font-bold mb-1.5 sm:mb-2 md:mb-3 text-pink-300">Misi</h3>
-                <p className="text-white/60 text-[10px] sm:text-xs md:text-sm leading-relaxed">
+                <h3 className="text-sm sm:text-base md:text-xl font-bold mb-1.5 sm:mb-2 md:mb-3 text-coral-300">Misi</h3>
+                <p className="text-paper-100/60 text-[10px] sm:text-xs md:text-sm leading-relaxed">
                   "datang membawa mimpi, pulang membawa versi terbaik dari diri sendiri."
                 </p>
               </div>
@@ -325,35 +325,35 @@ function About() {
           {/* Statistik */}
           <div
             ref={statsRef}
-            className="bg-gradient-to-r from-yellow-300/5 via-pink-400/5 to-purple-400/5 backdrop-blur-xl p-4 sm:p-5 md:p-8 rounded-2xl sm:rounded-3xl border border-white/10 hover:border-yellow-300/20 transition-all duration-500 animate-fadeUp delay-500"
+            className="bg-gradient-to-r from-gold-400/5 via-coral-400/5 to-teal-400/5 backdrop-blur-xl p-4 sm:p-5 md:p-8 rounded-2xl sm:rounded-3xl border border-paper-100/10 hover:border-gold-400/20 transition-all duration-500 animate-fadeUp delay-500"
           >
             <h2 className="text-sm sm:text-base md:text-2xl font-bold mb-3 sm:mb-5 md:mb-8 text-center flex items-center justify-center gap-1.5 sm:gap-2">
-              <Rocket size={16} className="sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] text-yellow-400/70" />
+              <Rocket size={16} className="sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] text-gold-500/70" />
               Komunitas Kami
             </h2>
             <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-6 text-center">
               <StatItem
-                icon={<Users size={22} className="sm:w-[26px] sm:h-[26px] md:w-[32px] md:h-[32px] text-yellow-400/70" />}
+                icon={<Users size={22} className="sm:w-[26px] sm:h-[26px] md:w-[32px] md:h-[32px] text-gold-500/70" />}
                 value={studentCount + "+"}
                 label="Mahasiswa"
                 isVisible={isVisible}
-                color="text-yellow-400"
+                color="text-gold-500"
                 delay={0}
               />
               <StatItem
-                icon={<FolderOpen size={22} className="sm:w-[26px] sm:h-[26px] md:w-[32px] md:h-[32px] text-pink-400/70" />}
+                icon={<FolderOpen size={22} className="sm:w-[26px] sm:h-[26px] md:w-[32px] md:h-[32px] text-coral-400/70" />}
                 value={portfolioCount + "+"}
                 label="Portfolio"
                 isVisible={isVisible}
-                color="text-pink-400"
+                color="text-coral-400"
                 delay={300}
               />
               <StatItem
-                icon={<Star size={22} className="sm:w-[26px] sm:h-[26px] md:w-[32px] md:h-[32px] text-purple-400/70" />}
+                icon={<Star size={22} className="sm:w-[26px] sm:h-[26px] md:w-[32px] md:h-[32px] text-teal-400/70" />}
                 value="100%"
                 label="Solid Team"
                 isVisible={isVisible}
-                color="text-purple-400"
+                color="text-teal-400"
                 delay={600}
               />
             </div>
@@ -362,30 +362,30 @@ function About() {
           {/* Team Section */}
           <div className="animate-fadeUp delay-600">
             <h2 className="text-sm sm:text-base md:text-2xl font-bold mb-3 sm:mb-4 md:mb-6 text-center flex items-center justify-center gap-1.5 sm:gap-2">
-              <User size={16} className="sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] text-yellow-400/70" />
+              <User size={16} className="sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] text-gold-500/70" />
               Tim Pengembang
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6 max-w-3xl mx-auto">
               {teamMembers.map((member, index) => (
                 <div
                   key={index}
-                  className="group relative bg-white/10 backdrop-blur-xl p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl border border-white/10 hover:border-yellow-300/30 transition-all duration-500 hover:-translate-y-1 sm:hover:-translate-y-2 md:hover:-translate-y-3 hover:shadow-2xl hover:shadow-yellow-500/10 text-center cursor-pointer"
+                  className="group relative bg-paper-100/10 backdrop-blur-xl p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl border border-paper-100/10 hover:border-gold-400/30 transition-all duration-500 hover:-translate-y-1 sm:hover:-translate-y-2 md:hover:-translate-y-3 hover:shadow-2xl hover:shadow-gold-600/10 text-center cursor-pointer"
                   style={{ animationDelay: `${(index + 1) * 100}ms` }}
                   onMouseEnter={() => setHoveredMember(index)}
                   onMouseLeave={() => setHoveredMember(null)}
                 >
-                  <div className="absolute inset-0 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-20 bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500 transition-opacity duration-700"></div>
+                  <div className="absolute inset-0 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-20 bg-gradient-to-r from-gold-500 via-coral-500 to-teal-500 transition-opacity duration-700"></div>
                   <div className="relative z-10">
                     <div className="text-3xl sm:text-4xl md:text-5xl mb-1.5 sm:mb-2 md:mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">{member.avatar}</div>
-                    <p className="text-xs sm:text-sm md:text-base font-bold text-white/90 group-hover:text-yellow-300 transition-colors">{member.name}</p>
-                    <p className="text-[8px] sm:text-[10px] md:text-xs text-white/50 leading-relaxed">{member.role}</p>
+                    <p className="text-xs sm:text-sm md:text-base font-bold text-paper-100/90 group-hover:text-gold-400 transition-colors">{member.name}</p>
+                    <p className="text-[8px] sm:text-[10px] md:text-xs text-paper-100/50 leading-relaxed">{member.role}</p>
                     <div className={`mt-1.5 sm:mt-2 h-0.5 w-0 group-hover:w-full transition-all duration-500 bg-gradient-to-r ${member.color} rounded-full mx-auto`}></div>
                     {hoveredMember === index && (
                       <div className="mt-1.5 sm:mt-2 md:mt-3 space-y-0.5 sm:space-y-1 animate-fadeUp">
-                        <p className="text-[7px] sm:text-[8px] md:text-[10px] text-white/60">{member.bio}</p>
-                        <div className="flex justify-center gap-1 sm:gap-1.5 md:gap-2 text-[5px] sm:text-[6px] md:text-[8px] text-white/30">
+                        <p className="text-[7px] sm:text-[8px] md:text-[10px] text-paper-100/60">{member.bio}</p>
+                        <div className="flex justify-center gap-1 sm:gap-1.5 md:gap-2 text-[5px] sm:text-[6px] md:text-[8px] text-paper-100/30">
                           {member.skills.map((skill, i) => (
-                            <span key={i} className="px-1 sm:px-1.5 md:px-2 py-0.5 bg-white/10 rounded-full border border-white/10">{skill}</span>
+                            <span key={i} className="px-1 sm:px-1.5 md:px-2 py-0.5 bg-paper-100/10 rounded-full border border-paper-100/10">{skill}</span>
                           ))}
                         </div>
                       </div>
@@ -398,33 +398,33 @@ function About() {
 
           {/* Testimoni */}
           <div className="relative animate-fadeUp delay-650">
-            <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 md:-top-8 md:-left-8 text-4xl sm:text-5xl md:text-7xl text-yellow-400/20 font-serif">"</div>
-            <div className="bg-white/10 backdrop-blur-xl p-4 sm:p-5 md:p-10 rounded-2xl sm:rounded-3xl border border-white/10 hover:border-yellow-300/20 transition-all duration-500 text-center hover:scale-[1.01] hover:shadow-2xl">
-              <p className="text-white/70 text-xs sm:text-sm md:text-lg italic max-w-2xl mx-auto leading-relaxed">
+            <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 md:-top-8 md:-left-8 text-4xl sm:text-5xl md:text-7xl text-gold-500/20 font-serif">"</div>
+            <div className="bg-paper-100/10 backdrop-blur-xl p-4 sm:p-5 md:p-10 rounded-2xl sm:rounded-3xl border border-paper-100/10 hover:border-gold-400/20 transition-all duration-500 text-center hover:scale-[1.01] hover:shadow-2xl">
+              <p className="text-paper-100/70 text-xs sm:text-sm md:text-lg italic max-w-2xl mx-auto leading-relaxed">
                 "Bersama SISVOR 009, kami belajar bahwa kolaborasi adalah kunci untuk menciptakan 
                 hal-hal luar biasa. Setiap karya adalah langkah menuju masa depan yang lebih cerah."
               </p>
               <div className="mt-3 sm:mt-4 md:mt-6 flex items-center justify-center gap-1.5 sm:gap-2 md:gap-3">
-                <div className="w-6 sm:w-8 md:w-12 h-0.5 bg-gradient-to-r from-transparent to-yellow-400/50"></div>
-                <span className="text-white/40 text-[10px] sm:text-xs md:text-sm font-medium">— Tim SISVOR 009</span>
-                <div className="w-6 sm:w-8 md:w-12 h-0.5 bg-gradient-to-l from-transparent to-yellow-400/50"></div>
+                <div className="w-6 sm:w-8 md:w-12 h-0.5 bg-gradient-to-r from-transparent to-gold-500/50"></div>
+                <span className="text-paper-100/40 text-[10px] sm:text-xs md:text-sm font-medium">— Tim SISVOR 009</span>
+                <div className="w-6 sm:w-8 md:w-12 h-0.5 bg-gradient-to-l from-transparent to-gold-500/50"></div>
               </div>
             </div>
           </div>
         </div>
 
         {/* Footer */}
-        <div className="mt-8 sm:mt-12 md:mt-20 text-center text-white/20 text-[8px] sm:text-xs font-mono flex flex-col items-center gap-1.5 sm:gap-2 md:gap-3">
-          <p className="text-[10px] sm:text-xs md:text-sm text-white/30 font-semibold tracking-wider">SISVOR 009</p>
+        <div className="mt-8 sm:mt-12 md:mt-20 text-center text-paper-100/20 text-[8px] sm:text-xs font-mono flex flex-col items-center gap-1.5 sm:gap-2 md:gap-3">
+          <p className="text-[10px] sm:text-xs md:text-sm text-paper-100/30 font-semibold tracking-wider">SISVOR 009</p>
           <p className="text-[7px] sm:text-[8px] md:text-[10px]">© {new Date().getFullYear()} — Built with ❤️</p>
-          <div className="flex items-center gap-1.5 sm:gap-2 md:gap-4 text-[7px] sm:text-[8px] md:text-[10px] text-white/10">
-            <span className="hover:text-white/30 transition-colors">React</span>
-            <span className="w-px h-1.5 sm:h-2 bg-white/10"></span>
-            <span className="hover:text-white/30 transition-colors">Node.js</span>
-            <span className="w-px h-1.5 sm:h-2 bg-white/10"></span>
-            <span className="hover:text-white/30 transition-colors">MongoDB</span>
-            <span className="w-px h-1.5 sm:h-2 bg-white/10"></span>
-            <span className="hover:text-white/30 transition-colors">Tailwind</span>
+          <div className="flex items-center gap-1.5 sm:gap-2 md:gap-4 text-[7px] sm:text-[8px] md:text-[10px] text-paper-100/10">
+            <span className="hover:text-paper-100/30 transition-colors">React</span>
+            <span className="w-px h-1.5 sm:h-2 bg-paper-100/10"></span>
+            <span className="hover:text-paper-100/30 transition-colors">Node.js</span>
+            <span className="w-px h-1.5 sm:h-2 bg-paper-100/10"></span>
+            <span className="hover:text-paper-100/30 transition-colors">MongoDB</span>
+            <span className="w-px h-1.5 sm:h-2 bg-paper-100/10"></span>
+            <span className="hover:text-paper-100/30 transition-colors">Tailwind</span>
           </div>
         </div>
       </div>
@@ -432,7 +432,7 @@ function About() {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 p-2 sm:p-2.5 md:p-3 rounded-full bg-gradient-to-r from-yellow-300 to-orange-400 text-black shadow-lg shadow-yellow-500/20 hover:scale-110 transition-all duration-300 ${
+        className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 p-2 sm:p-2.5 md:p-3 rounded-full bg-gradient-to-r from-gold-400 to-gold-600 text-black shadow-lg shadow-gold-600/20 hover:scale-110 transition-all duration-300 ${
           showScrollTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
         }`}
         aria-label="Scroll to top"
@@ -480,7 +480,7 @@ function StatItem({ icon, value, label, isVisible, color, delay = 0 }) {
       <div className={`text-xl sm:text-2xl md:text-5xl font-extrabold ${color} drop-shadow-[0_2px_20px_rgba(251,191,36,0.2)]`}>
         {value.includes('%') ? count + '%' : count + '+'}
       </div>
-      <div className="text-white/40 text-[8px] sm:text-[10px] md:text-sm mt-0.5 sm:mt-1">{label}</div>
+      <div className="text-paper-100/40 text-[8px] sm:text-[10px] md:text-sm mt-0.5 sm:mt-1">{label}</div>
     </div>
   );
 }

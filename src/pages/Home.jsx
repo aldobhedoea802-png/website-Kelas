@@ -11,13 +11,7 @@ function Home() {
   // 🟢 Gunakan BASE_URL untuk path yang benar di GitHub Pages
   const base = import.meta.env.BASE_URL; // => '/website-Kelas/'
 
-  const photos = [
-    base + "foto1.jpeg",
-    base + "foto2.jpeg",
-    base + "foto3.jpeg",
-    base + "foto4.jpeg",
-    // tambahkan foto lain dengan cara yang sama
-  ];
+  const photos = Array.from({ length: 16 }, (_, i) => `${base}foto${i + 1}.jpeg`);
 
   // Efek scroll untuk mengubah tampilan navbar
   useEffect(() => {
@@ -29,7 +23,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen relative overflow-hidden text-white">
+    <div className="min-h-screen relative overflow-hidden text-paper-100">
       {/* Navbar tetap di atas dengan transisi */}
       <Navbar scrolled={scrolled} />
 

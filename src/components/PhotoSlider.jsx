@@ -54,7 +54,7 @@ function PhotoSlider({ photos }) {
         {sparkles.map((s) => (
           <div
             key={s.id}
-            className="absolute rounded-full bg-yellow-300/30 animate-twinkle"
+            className="absolute rounded-full bg-gold-400/30 animate-twinkle"
             style={{
               width: s.size,
               height: s.size,
@@ -76,23 +76,22 @@ function PhotoSlider({ photos }) {
         }}
       >
         <div className="inline-block relative">
-          <h2 className="text-2xl md:text-5xl lg:text-6xl font-extrabold 
-                         bg-gradient-to-r from-yellow-300 via-pink-400 to-purple-400 
+          <h2 className="font-display text-2xl md:text-5xl lg:text-6xl font-semibold 
+                         bg-gradient-to-r from-gold-400 via-coral-400 to-teal-400 
                          bg-[length:200%_auto] animate-gradient-x 
-                         bg-clip-text text-transparent 
-                         drop-shadow-[0_4px_30px_rgba(251,191,36,0.2)]">
+                         bg-clip-text text-transparent">
             Foto Kenangan SISVOR 009
           </h2>
           <div className="absolute -bottom-2 md:-bottom-3 left-1/2 -translate-x-1/2 w-1/3 md:w-1/2 h-0.5 md:h-1 
-                          bg-gradient-to-r from-yellow-300 via-pink-400 to-purple-400 
+                          bg-gradient-to-r from-gold-400 via-coral-400 to-teal-400 
                           rounded-full"></div>
         </div>
-        <p className="text-white/50 max-w-xl mx-auto mt-4 md:mt-6 text-xs md:text-base 
+        <p className="text-paper-100/50 max-w-xl mx-auto mt-4 md:mt-6 text-xs md:text-base 
                       flex items-center justify-center gap-1.5 md:gap-2">
-          <Camera size={14} className="md:w-[18px] md:h-[18px] text-yellow-400/60" />
+          <Camera size={14} className="md:w-[18px] md:h-[18px] text-gold-500/60" />
           <span className="hidden sm:inline">Momen kebersamaan, perjalanan, dan kenangan terbaik kelas kita</span>
           <span className="sm:hidden">Momen terbaik kelas kita</span>
-          <span className="text-yellow-400/60">✨</span>
+          <span className="text-gold-500/60">✨</span>
         </p>
       </div>
 
@@ -101,24 +100,24 @@ function PhotoSlider({ photos }) {
         className="relative overflow-hidden rounded-2xl md:rounded-3xl 
                    bg-gradient-to-br from-white/5 to-white/10 
                    backdrop-blur-xl border-2 border-transparent 
-                   py-6 md:py-10 px-1.5 md:px-2 shadow-2xl shadow-black/30
-                   hover:border-white/20 transition-colors duration-500
+                   py-6 md:py-10 px-1.5 md:px-2 shadow-2xl shadow-ink-950/30
+                   hover:border-paper-100/20 transition-colors duration-500
                    before:absolute before:inset-0 before:rounded-2xl md:before:rounded-3xl before:p-[2px] 
-                   before:bg-gradient-to-r before:from-yellow-300 before:via-pink-400 before:to-purple-400 
+                   before:bg-gradient-to-r before:from-gold-400 before:via-coral-400 before:to-teal-400 
                    before:bg-[length:300%_auto] before:animate-gradient-x 
                    before:-z-10"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
         {/* Efek glow di dalam container */}
-        <div className="absolute -top-20 -left-20 w-40 md:w-60 h-40 md:h-60 bg-yellow-300/10 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-20 -right-20 w-40 md:w-60 h-40 md:h-60 bg-pink-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute -top-20 -left-20 w-40 md:w-60 h-40 md:h-60 bg-gold-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-20 -right-20 w-40 md:w-60 h-40 md:h-60 bg-coral-400/10 rounded-full blur-3xl"></div>
 
         {/* Fade kiri & kanan — lebih tipis di mobile */}
         <div className="absolute left-0 top-0 bottom-0 w-12 md:w-32 
-                        bg-gradient-to-r from-black/90 to-transparent z-10"></div>
+                        bg-gradient-to-r from-ink-950/90 to-transparent z-10"></div>
         <div className="absolute right-0 top-0 bottom-0 w-12 md:w-32 
-                        bg-gradient-to-l from-black/90 to-transparent z-10"></div>
+                        bg-gradient-to-l from-ink-950/90 to-transparent z-10"></div>
 
         {/* Slider 1 */}
         <div
@@ -147,15 +146,15 @@ function PhotoSlider({ photos }) {
         {/* Indikator Play/Pause dan jumlah foto */}
         <div className="absolute bottom-3 right-3 md:bottom-6 md:right-6 
                         flex items-center gap-2 md:gap-3 z-20">
-          <div className="text-white/20 text-[8px] md:text-xs font-mono tracking-widest
-                          bg-black/30 backdrop-blur-sm px-2 md:px-3 py-0.5 md:py-1 rounded-full border border-white/5">
+          <div className="text-paper-100/20 text-[8px] md:text-xs font-mono tracking-widest
+                          bg-ink-950/30 backdrop-blur-sm px-2 md:px-3 py-0.5 md:py-1 rounded-full border border-paper-100/5">
             {photos.length} foto
           </div>
-          <div className="bg-black/30 backdrop-blur-sm px-1.5 md:px-2 py-0.5 md:py-1 rounded-full border border-white/5">
+          <div className="bg-ink-950/30 backdrop-blur-sm px-1.5 md:px-2 py-0.5 md:py-1 rounded-full border border-paper-100/5">
             {isPaused ? (
-              <Play size={12} className="md:w-[14px] md:h-[14px] text-yellow-400/60" />
+              <Play size={12} className="md:w-[14px] md:h-[14px] text-gold-500/60" />
             ) : (
-              <Pause size={12} className="md:w-[14px] md:h-[14px] text-white/40" />
+              <Pause size={12} className="md:w-[14px] md:h-[14px] text-paper-100/40" />
             )}
           </div>
         </div>
@@ -165,12 +164,12 @@ function PhotoSlider({ photos }) {
           <Link
             to="/gallery"
             className="group flex items-center gap-1 md:gap-1.5 text-[8px] md:text-sm 
-                       text-white/40 hover:text-white/80 
-                       bg-black/30 backdrop-blur-sm px-2 md:px-3 py-0.5 md:py-1.5 rounded-full 
-                       border border-white/5 hover:border-yellow-300/20 
+                       text-paper-100/40 hover:text-paper-100/80 
+                       bg-ink-950/30 backdrop-blur-sm px-2 md:px-3 py-0.5 md:py-1.5 rounded-full 
+                       border border-paper-100/5 hover:border-gold-400/20 
                        transition-all duration-300"
           >
-            <Sparkles size={10} className="md:w-[14px] md:h-[14px] text-yellow-400/60 group-hover:scale-110 transition-transform duration-300" />
+            <Sparkles size={10} className="md:w-[14px] md:h-[14px] text-gold-500/60 group-hover:scale-110 transition-transform duration-300" />
             <span className="hidden sm:inline">Lihat Galeri</span>
             <span className="sm:hidden">Galeri</span>
             <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
@@ -235,24 +234,24 @@ function PhotoCard({ photo, index, reverse, isMobile }) {
         <img
           src={photo}
           className={`${imageSize} object-cover rounded-lg md:rounded-xl 
-                      shadow-lg shadow-black/30 
+                      shadow-lg shadow-ink-950/30 
                       transition-all duration-300 
                       border border-transparent md:border-2 
-                      group-hover:border-yellow-300/30
-                      group-hover:shadow-2xl group-hover:shadow-yellow-500/20`}
+                      group-hover:border-gold-400/30
+                      group-hover:shadow-2xl group-hover:shadow-gold-600/20`}
           alt={`Foto ${index + 1}`}
         />
 
         {/* Overlay gradien + nomor + hati — lebih sederhana di mobile */}
         <div className={`absolute inset-0 rounded-lg md:rounded-xl 
-                         bg-gradient-to-t from-black/70 via-transparent to-transparent 
+                         bg-gradient-to-t from-ink-950/70 via-transparent to-transparent 
                          opacity-0 group-hover:opacity-100 transition-opacity duration-500
                          pointer-events-none`}>
           <div className="absolute bottom-1.5 md:bottom-3 left-1.5 md:left-3 right-1.5 md:right-3 flex justify-between items-center">
-            <span className="text-white/80 text-[8px] md:text-xs font-medium drop-shadow-md">
+            <span className="text-paper-100/80 text-[8px] md:text-xs font-medium drop-shadow-md">
               #{String(index + 1).padStart(2, '0')}
             </span>
-            <Heart size={12} className="md:w-[16px] md:h-[16px] text-white/50 group-hover:text-red-400 transition-colors duration-300" />
+            <Heart size={12} className="md:w-[16px] md:h-[16px] text-paper-100/50 group-hover:text-red-400 transition-colors duration-300" />
           </div>
         </div>
 
@@ -267,7 +266,7 @@ function PhotoCard({ photo, index, reverse, isMobile }) {
 
         {/* Efek glow di belakang */}
         <div className={`absolute -inset-1 rounded-xl 
-                         bg-gradient-to-r from-yellow-300/0 via-yellow-300/15 to-yellow-300/0 
+                         bg-gradient-to-r from-gold-400/0 via-gold-400/15 to-gold-400/0 
                          opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10`}>
         </div>
       </div>

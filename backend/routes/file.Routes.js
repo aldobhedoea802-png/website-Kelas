@@ -18,13 +18,41 @@ cb(null,Date.now()+"-"+file.originalname)
 
 })
 
-const upload = multer({storage})
+// Hanya izinkan tipe file yang wajar untuk lampiran portofolio (bukan skrip/executable)
+const ALLOWED_EXTENSIONS = [
+  ".pdf", ".doc", ".docx", ".ppt", ".pptx", ".xls", ".xlsx",
+  ".zip", ".rar",
+  ".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg",
+  ".txt", ".md",
+]
+
+const fileFilter = (req, file, cb) => {
+  const ext = ("." + (file.originalname.split(".").pop() || "")).toLowerCase()
+  if (ALLOWED_EXTENSIONS.includes(ext)) {
+    cb(null, true)
+  } else {
+    cb(new Error(`Tipe file .${ext.replace(".", "")} tidak diizinkan`))
+  }
+}
+
+const upload = multer({
+  storage,
+  fileFilter,
+  limits: { fileSize: 20 * 1024 * 1024 }, // maks 20MB
+})
 
 
 // ============================
 // UPLOAD FILE PROJECT
 // ============================
-router.post("/", upload.single("file"), async(req,res)=>{
+router.post("/", (req, res, next) => {
+  upload.single("file")(req, res, (err) => {
+    if (err) {
+      return res.status(400).json({ message: err.message })
+    }
+    next()
+  })
+}, async(req,res)=>{
 
 try{
 

@@ -207,11 +207,11 @@ function Stats() {
           {[1, 2, 3].map((i) => (
             <div
               key={i}
-              className="bg-white/5 backdrop-blur-xl p-6 md:p-10 rounded-3xl border border-white/10 animate-pulse"
+              className="bg-paper-100/5 backdrop-blur-xl p-6 md:p-10 rounded-3xl border border-paper-100/10 animate-pulse"
             >
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-white/10 rounded-full mx-auto mb-3 md:mb-4"></div>
-              <div className="h-8 md:h-10 bg-white/10 rounded w-20 md:w-24 mx-auto mb-2 md:mb-3"></div>
-              <div className="h-4 bg-white/10 rounded w-16 md:w-20 mx-auto"></div>
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-paper-100/10 rounded-full mx-auto mb-3 md:mb-4"></div>
+              <div className="h-8 md:h-10 bg-paper-100/10 rounded w-20 md:w-24 mx-auto mb-2 md:mb-3"></div>
+              <div className="h-4 bg-paper-100/10 rounded w-16 md:w-20 mx-auto"></div>
             </div>
           ))}
         </div>
@@ -225,52 +225,49 @@ function Stats() {
       className="relative max-w-5xl mx-auto mt-20 md:mt-36 px-4 md:px-10 text-center overflow-hidden"
     >
       {/* Dekorasi */}
-      <div className="absolute -top-20 -left-20 w-48 md:w-64 h-48 md:h-64 bg-yellow-300/10 rounded-full blur-3xl"></div>
-      <div className="absolute -bottom-20 -right-20 w-48 md:w-64 h-48 md:h-64 bg-pink-400/10 rounded-full blur-3xl"></div>
+      <div className="absolute -top-20 -left-20 w-48 md:w-64 h-48 md:h-64 bg-gold-400/10 rounded-full blur-3xl"></div>
+      <div className="absolute -bottom-20 -right-20 w-48 md:w-64 h-48 md:h-64 bg-coral-400/10 rounded-full blur-3xl"></div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 relative z-10">
         {stats.map((stat, index) => (
           <div
             key={index}
-            className={`group bg-white/5 backdrop-blur-xl p-6 md:p-10 rounded-3xl 
-                        border border-white/10 hover:border-yellow-300/30 
-                        shadow-xl hover:shadow-2xl hover:shadow-yellow-500/10 
+            className={`group bg-paper-100/5 backdrop-blur-xl p-6 md:p-10 rounded-3xl 
+                        border border-paper-100/10 hover:border-gold-400/30 
+                        shadow-xl hover:shadow-2xl hover:shadow-gold-600/10 
                         transition-all duration-500 
                         hover:scale-105 hover:-translate-y-2 
                         relative overflow-hidden
                         animate-fadeUp`}
             style={{ animationDelay: `${(index + 1) * 150}ms` }}
           >
-            <div className="absolute -top-10 -right-10 w-24 md:w-32 h-24 md:h-32 bg-yellow-300/5 rounded-full blur-2xl group-hover:bg-yellow-300/10 transition-all duration-500"></div>
-            <div className="absolute -bottom-10 -left-10 w-24 md:w-32 h-24 md:h-32 bg-pink-400/5 rounded-full blur-2xl group-hover:bg-pink-400/10 transition-all duration-500"></div>
+            <div className="absolute -top-10 -right-10 w-24 md:w-32 h-24 md:h-32 bg-gold-400/5 rounded-full blur-2xl group-hover:bg-gold-400/10 transition-all duration-500"></div>
+            <div className="absolute -bottom-10 -left-10 w-24 md:w-32 h-24 md:h-32 bg-coral-400/5 rounded-full blur-2xl group-hover:bg-coral-400/10 transition-all duration-500"></div>
 
             <div className="flex justify-center mb-3 md:mb-4">
-              <div className="p-2.5 md:p-3 rounded-full bg-gradient-to-br from-yellow-300/20 to-orange-400/20 
-                              group-hover:from-yellow-300/30 group-hover:to-orange-400/30 
+              <div className="p-2.5 md:p-3 rounded-full bg-gradient-to-br from-gold-400/20 to-gold-600/20 
+                              group-hover:from-gold-400/30 group-hover:to-gold-600/30 
                               transition-all duration-500">
                 <stat.icon
                   size={isMobile ? 22 : 28}
-                  className="text-yellow-400/70 group-hover:text-yellow-300 transition-colors duration-500"
+                  className="text-gold-500/70 group-hover:text-gold-400 transition-colors duration-500"
                 />
               </div>
             </div>
 
-            <h2 className="text-4xl md:text-6xl font-extrabold 
-                           bg-gradient-to-r from-yellow-300 via-orange-400 to-pink-500 
-                           bg-clip-text text-transparent 
-                           drop-shadow-[0_2px_20px_rgba(251,191,36,0.2)]
-                           group-hover:drop-shadow-[0_2px_30px_rgba(251,191,36,0.4)]
+            <h2 className="roll-badge text-4xl md:text-6xl font-bold 
+                           text-gold-400
                            transition-all duration-500">
               {counts[index]}
-              <span className="text-yellow-300/50">{stat.suffix}</span>
+              <span className="text-gold-400/50">{stat.suffix}</span>
             </h2>
 
-            <p className="text-white/60 mt-2 md:mt-3 text-xs md:text-sm font-medium tracking-wide">
+            <p className="text-paper-100/60 mt-2 md:mt-3 text-xs md:text-sm font-medium tracking-wide">
               {stat.label}
             </p>
 
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 
-                            bg-gradient-to-r from-yellow-300 via-pink-400 to-purple-400 
+                            bg-gradient-to-r from-gold-400 via-coral-400 to-teal-400 
                             group-hover:w-2/3 transition-all duration-700 rounded-full"></div>
           </div>
         ))}
